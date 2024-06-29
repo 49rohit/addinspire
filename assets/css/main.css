@@ -896,7 +896,7 @@ section,
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin: 5px 0 30px 0;
+  margin: 20px 0 0px 0;
   font-size: 20px;
   font-weight: 400;
 }
@@ -980,6 +980,10 @@ section,
 .featured-services .service-item {
   position: relative;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .featured-services .service-item .icon {
@@ -987,7 +991,7 @@ section,
   width: 72px;
   height: 72px;
   position: relative;
-  margin-right: 15px;
+  
   line-height: 0;
   display: flex;
   align-items: center;
@@ -1006,6 +1010,7 @@ section,
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
+  margin-top: 15px;
 }
 
 .featured-services .service-item .title a {
