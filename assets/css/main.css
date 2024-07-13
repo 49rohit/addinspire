@@ -84,8 +84,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  /* color: var(--heading-color); */
+  color: #223663;
   font-family: var(--heading-font);
+  font-weight: 800;
+  font-family: var(--heading-font);
+  font-weight: 800;
+
 }
 
 /*--------------------------------------------------------------
@@ -115,16 +120,10 @@ h6 {
   font-weight: 700;
   color: var(--heading-color);
 }
-
-@media (max-width: 480px) {
-  .header .logo img {
-    max-height: 24px;
-  }
-
-  .header .logo h1 {
-    font-size: 24px;
-  }
+.details{
+  width: 50%;
 }
+
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
@@ -173,6 +172,49 @@ h6 {
 ------------------------------*/
 .index-page.scrolled .header {
   --background-color: #ffffff;
+}
+
+.main-slide{
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  margin-top:10%;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 19px 0 rgb(171 171 171 / 37%);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    max-height: 55px;
+  }
+
+  .header .logo h1 {
+    font-size: 24px;
+  }
+
+  .slide1 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    align-content: stretch;
+}
+
+.details{
+  width: 100%;
+}
+.main-slide {
+  width: 90%;
+}
+
+.icon-box {
+  width: 75% !important;
+}
 }
 
 /*--------------------------------------------------------------
@@ -800,11 +842,18 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 30px 0 30px;
   scroll-margin-top: 100px;
   overflow: clip;
 }
 
+.float-right{
+float: right;
+}
+
+.float-left{
+  float: left;
+}
 @media (max-width: 1199px) {
 
   section,
@@ -951,6 +1000,20 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.slide1{
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: space-around;
+}
+
+.single-item{
+  background:linear-gradient(rgb(255 255 255), rgb(255 255 255 / 68%), rgb(255 255 255)), /* Overlay with opacity */ url(../img/hero-bg-light.webp) no-repeat center center / cover;
+}
+
+.welcomtitle{
+  
+}
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
@@ -973,8 +1036,9 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services {
-  --background-color: color-mix(in srgb, var(--accent-color), transparent 94%);
+  /* --background-color: color-mix(in srgb, var(--accent-color), transparent 94%); */
   padding: 40px 0;
+  background-color: #fafafa;
 }
 
 .featured-services .service-item {
@@ -1105,6 +1169,17 @@ section,
   border-radius: 10px;
 }
 
+.icon-box{
+  flex-direction: column;
+  align-items: center;
+  border-style:  solid #bdbdbd;
+  border-radius: 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgb(0 0 0 / 7%) 1.95px 1.95px 2.6px;
+  padding: 28px 10px;
+  width: 27%;
+  margin: 33px auto;
+}
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
@@ -1392,15 +1467,18 @@ section,
 
 .more-features .icon-box i {
   color: var(--accent-color);
-  margin-right: 15px;
-  font-size: 24px;
+  font-size: 35px;
   line-height: 1.2;
+  margin-bottom: 15px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 .more-features .icon-box h4 {
   font-weight: 600;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .more-features .icon-box p {
@@ -1524,6 +1602,8 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
 }
+
+
 
 @media (max-width: 992px) {
   .pricing .box {
